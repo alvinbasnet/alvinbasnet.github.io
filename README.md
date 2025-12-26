@@ -27,10 +27,34 @@ Relevant coursework:
 ---
 
 ## Featured Projects
-- Passive Microfluidic Micromixer (COMSOL)
-- Self-Balancing Inverted Pendulum
-- Gauges, Jigs & Fixtures Design
-- Engineering Maintenance & Reliability (407 ETR)
+## Projects
+
+### Passive Microfluidic Micromixer (Capstone)
+- Designed and simulated passive microfluidic channels in COMSOL
+- Achieved ~35% improvement in mixing efficiency  
+🔗 [View Project](https://github.com/alvinbasnet/passive-micromixer-comsol)
+
+---
+
+### Self-Balancing Inverted Pendulum
+- Designed and built an Arduino-based inverted pendulum system
+- Implemented PID and pole placement control  
+🔗 [View Project](https://github.com/alvinbasnet/self-balancing-inverted-pendulum-robot)
+
+---
+
+### Gauges, Jigs & Fixtures Design
+- Designed inspection gauges and manufacturing fixtures
+- Applied GD&T principles (MMC, LMC)  
+🔗 [View Project](https://github.com/alvinbasnet/gauges-jigs-fixtures-design)
+
+---
+
+### Engineering Maintenance & Reliability (407 ETR)
+- Supported inspections and preventive maintenance
+- Applied reliability and safety-focused engineering principles  
+🔗 [View Project](https://github.com/alvinbasnet/maintenance-reliability-engineering)
+
 
 ---
 
