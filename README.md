@@ -1,134 +1,158 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alvin Basnet | Engineering Portfolio</title>
+  <title>Alvin Basnet – Engineering Portfolio</title>
 
   <style>
-    :root {
-      --primary: #1f4fd8;
-      --text: #222;
-      --muted: #555;
-      --bg: #f5f7fb;
-      --card: #ffffff;
-    }
 
-    * {
-      box-sizing: border-box;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-    }
+    /* ------------------
+       FONT + BASE
+    ------------------ */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
     body {
       margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #081224, #1e3057);
+      color: #eaeaea;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 960px;
       margin: auto;
       padding: 40px 20px;
     }
 
     h1 {
-      font-size: 2.4rem;
-      margin-bottom: 5px;
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 700;
+      color: #ffffff;
+      text-align: center;
     }
 
-    h2 {
-      margin-top: 50px;
-      border-left: 5px solid var(--primary);
+    p.subtitle {
+      text-align: center;
+      font-size: 1.2rem;
+      color: #afafaf;
+      margin-top: 8px;
+    }
+
+    h2.section-title {
+      color: #ffffff;
+      margin-top: 2.5rem;
+      font-size: 2rem;
+      border-left: 5px solid #4cc9f0;
       padding-left: 12px;
     }
 
-    p {
-      color: var(--muted);
-    }
-
-    /* ===== PROJECT CARDS ===== */
+    /* ==============================
+       PROJECT CARDS
+    ============================== */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
+      gap: 22px;
+      margin-top: 24px;
     }
 
-    .project-card {
-      background: var(--card);
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-      border-top: 5px solid var(--primary);
+    .card {
+      background: rgba(255,255,255,0.07);
+      backdrop-filter: blur(12px);
+      padding: 22px 18px;
+      border-radius: 14px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.3);
+      border-top: 4px solid #4cc9f0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .project-card:hover {
+    .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.4);
     }
 
-    .project-card h3 {
+    .card h3 {
       margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .project-card ul {
-      padding-left: 18px;
-      margin-bottom: 15px;
-    }
-
-    .project-card a {
-      text-decoration: none;
-      color: var(--primary);
+      color: #ffffff;
       font-weight: 600;
     }
 
-    /* ===== EXPERIENCE ===== */
-    .experience {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+    .card ul {
+      padding-left: 18px;
+      color: #dcdcdc;
     }
 
-    /* ===== FOOTER ===== */
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      color: #4cc9f0;
+      font-weight: 600;
+    }
+
+    /* ===================
+       EXPERIENCE
+    =================== */
+
+    .experience {
+      margin-top: 24px;
+      padding: 18px;
+      background: rgba(255,255,255,0.07);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      color: #ededed;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    }
+
+    .experience strong {
+      display: block;
+      margin-top: 12px;
+      font-size: 1.1rem;
+      color: #ffffff;
+    }
+
+    .experience ul {
+      padding-left: 18px;
+      list-style-type: disc;
+    }
+
+    /* ===================
+       CONTACT + BUTTON
+    =================== */
     .contact {
-      margin-top: 60px;
       text-align: center;
-      font-size: 0.95rem;
+      margin-top: 50px;
+      font-size: 1rem;
+      color: #dcdcdc;
     }
 
     .contact a {
-      color: var(--primary);
+      color: #4cc9f0;
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 700;
     }
+
   </style>
 </head>
 
 <body>
+
+  <!-- ===== HERO ===== -->
   <div class="container">
-
     <h1>Alvin Basnet</h1>
-    <p>
-      Mechanical Engineering (Mechatronics) student with hands-on experience in
-      mechanical design, electromechanical systems, maintenance support, and
-      engineering analysis.
-    </p>
+    <p class="subtitle">Mechanical Engineering (Mechatronics) | Design, Simulation & Systems Engineering</p>
 
-    <h2>Education</h2>
-    <p>
-      <strong>BEng – Mechanical Engineering (Mechatronics)</strong><br />
-      Toronto Metropolitan University (2020–2025)
-    </p>
-    <p>
-      Relevant Coursework: Mechatronic System Design, Control Systems,
-      Fluid Mechanics & Thermodynamics, Integrated Manufacturing
-    </p>
+    <!-- ===== EDUCATION ===== -->
+    <h2 class="section-title">Education</h2>
+    <p><strong>BEng – Mechanical Engineering (Mechatronics)</strong><br />
+      Toronto Metropolitan University (2020–2025)</p>
+    <p>Relevant Coursework: Mechatronic System Design, Control Systems, Fluid Mechanics & Thermodynamics, Integrated Manufacturing</p>
 
-    <h2>Technical Skills</h2>
+    <!-- ===== SKILLS ===== -->
+    <h2 class="section-title">Technical Skills</h2>
     <p>
       <strong>CAD & Design:</strong> SolidWorks, GD&T<br />
       <strong>Simulation:</strong> COMSOL Multiphysics, MATLAB, Simulink<br />
@@ -136,69 +160,70 @@
       <strong>Engineering:</strong> Mechanical design, maintenance support, CFD, documentation
     </p>
 
-    <h2>Featured Projects</h2>
-
+    <!-- ===== PROJECTS ===== -->
+    <h2 class="section-title">Featured Projects</h2>
     <div class="projects">
 
-      <div class="project-card">
-        <h3>Passive Microfluidic Micromixer (Capstone)</h3>
+      <div class="card">
+        <h3>Passive Microfluidic Micromixer</h3>
         <ul>
-          <li>Designed and simulated passive microfluidic channels in COMSOL</li>
-          <li>Achieved ~35% improvement in mixing efficiency</li>
+          <li>Designed & simulated microfluidic channels in COMSOL</li>
+          <li>Improved mixing efficiency by ~35%</li>
         </ul>
-        <a href="https://github.com/alvinbasnet/passive-micromixer-comsol">View Project →</a>
+        <a href="https://github.com/alvinbasnet/passive-micromixer-comsol" target="_blank">View Project →</a>
       </div>
 
-      <div class="project-card">
+      <div class="card">
         <h3>Self-Balancing Inverted Pendulum</h3>
         <ul>
-          <li>Designed and built an Arduino-based inverted pendulum system</li>
-          <li>Implemented PID and pole placement control</li>
+          <li>Arduino-based inverted pendulum</li>
+          <li>PID + control implementation</li>
         </ul>
-        <a href="https://github.com/alvinbasnet/self-balancing-inverted-pendulum-robot">View Project →</a>
+        <a href="https://github.com/alvinbasnet/self-balancing-inverted-pendulum-robot" target="_blank">View Project →</a>
       </div>
 
-      <div class="project-card">
-        <h3>Gauges, Jigs & Fixtures Design</h3>
+      <div class="card">
+        <h3>Gauges, Jigs & Fixtures</h3>
         <ul>
-          <li>Designed inspection gauges and manufacturing fixtures</li>
-          <li>Applied GD&T principles (MMC, LMC)</li>
+          <li>Inspection gauges & manufacturing fixtures</li>
+          <li>GD&T (MMC, LMC)</li>
         </ul>
-        <a href="https://github.com/alvinbasnet/gauges-jigs-fixtures-design">View Project →</a>
+        <a href="https://github.com/alvinbasnet/gauges-jigs-fixtures-design" target="_blank">View Project →</a>
       </div>
 
-      <div class="project-card">
-        <h3>Engineering Maintenance & Reliability (407 ETR)</h3>
+      <div class="card">
+        <h3>Engineering Maintenance (407 ETR)</h3>
         <ul>
-          <li>Supported inspections and preventive maintenance</li>
-          <li>Applied reliability and safety-focused engineering principles</li>
+          <li>Inspections & preventive maintenance</li>
+          <li>Reliability-focused engineering</li>
         </ul>
-        <a href="https://github.com/alvinbasnet/maintenance-reliability-engineering">View Project →</a>
+        <a href="https://github.com/alvinbasnet/maintenance-reliability-engineering" target="_blank">View Project →</a>
       </div>
 
     </div>
 
-    <h2>Experience Highlights</h2>
-
+    <!-- ===== EXPERIENCE ===== -->
+    <h2 class="section-title">Experience Highlights</h2>
     <div class="experience">
       <strong>Highway Operations Intern – 407 ETR</strong>
       <ul>
-        <li>Supported maintenance and reliability of electromechanical systems</li>
-        <li>Performed inspections and technical data analysis</li>
+        <li>Maintenance & reliability of electromechanical systems</li>
+        <li>Inspections & technical data analysis</li>
       </ul>
 
       <strong>Part-Time Manager – Marigold Indian Bistro</strong>
       <ul>
-        <li>Solved operational and maintenance challenges</li>
+        <li>Operations & maintenance problem solving</li>
         <li>Improved efficiency by 30%</li>
       </ul>
     </div>
 
+    <!-- ===== CONTACT ===== -->
     <div class="contact">
-      📧 alvinbasnet21@gmail.com <br />
+      📧 alvinbasnet21@gmail.com<br />
       🔗 <a href="#">LinkedIn (add link)</a>
     </div>
-
   </div>
+
 </body>
 </html>
