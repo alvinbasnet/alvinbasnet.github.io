@@ -2,226 +2,330 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alvin Basnet – Engineering Portfolio</title>
+  <title>Alvin Basnet | Mechanical Engineering Portfolio</title>
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
   <style>
-
-    /* ------------------
-       FONT + BASE
-    ------------------ */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-    body {
+    /* =========================
+       GLOBAL STYLES
+    ========================= */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #081224, #1e3057);
-      color: #eaeaea;
+      background: #0b0b0b;
+      color: white;
+      line-height: 1.6;
     }
 
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 40px 20px;
+    a {
+      color: white;
+      text-decoration: none;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin: 0;
+    /* =========================
+       HERO SECTION
+    ========================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("images/background.jpg"); /* ADD YOUR IMAGE HERE */
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* =========================
+       HEADER BOX
+    ========================= */
+    .header-box {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      right: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 26px;
+      border: 1.5px solid rgba(255,255,255,0.4);
+      border-radius: 18px;
+      backdrop-filter: blur(6px);
+    }
+
+    /* LOGO + NAME */
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-box {
+      width: 58px;
+      height: 58px;
+      border: 1.5px solid white;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-text {
+      font-size: 1.7rem;
       font-weight: 700;
-      color: #ffffff;
+      letter-spacing: 2px;
+    }
+
+    .name-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      white-space: nowrap;
+    }
+
+    /* RESUME BUTTON */
+    .resume-box {
+      border: 1.5px solid white;
+      padding: 10px 24px;
+      border-radius: 999px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .resume-box:hover {
+      background: white;
+      color: black;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
+       CENTER HERO TEXT
+    ========================= */
+    .hero-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
     }
 
-    p.subtitle {
-      text-align: center;
+    .hero-subtitle {
       font-size: 1.2rem;
-      color: #afafaf;
-      margin-top: 8px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      opacity: 0.9;
     }
 
-    h2.section-title {
-      color: #ffffff;
-      margin-top: 2.5rem;
+    .hero-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 5.2rem;
+      line-height: 1;
+    }
+
+    /* =========================
+       MAIN CONTENT
+    ========================= */
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    h2 {
       font-size: 2rem;
-      border-left: 5px solid #4cc9f0;
+      margin-bottom: 14px;
+      border-left: 4px solid white;
       padding-left: 12px;
     }
 
-    /* ==============================
+    p {
+      opacity: 0.9;
+      margin-bottom: 16px;
+    }
+
+    /* =========================
        PROJECT CARDS
-    ============================== */
+    ========================= */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 22px;
-      margin-top: 24px;
+      margin-top: 25px;
     }
 
     .card {
       background: rgba(255,255,255,0.07);
       backdrop-filter: blur(12px);
-      padding: 22px 18px;
-      border-radius: 14px;
-      box-shadow: 0 8px 28px rgba(0,0,0,0.3);
-      border-top: 4px solid #4cc9f0;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 16px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-6px);
-      box-shadow: 0 14px 34px rgba(0,0,0,0.4);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 12px;
     }
 
     .card h3 {
-      margin-top: 0;
-      color: #ffffff;
-      font-weight: 600;
+      margin-bottom: 10px;
     }
 
     .card ul {
       padding-left: 18px;
-      color: #dcdcdc;
+      opacity: 0.9;
     }
 
     .card a {
       display: inline-block;
       margin-top: 10px;
-      text-decoration: none;
-      color: #4cc9f0;
       font-weight: 600;
     }
 
-    /* ===================
+    /* =========================
        EXPERIENCE
-    =================== */
-
+    ========================= */
     .experience {
-      margin-top: 24px;
-      padding: 18px;
       background: rgba(255,255,255,0.07);
-      border-radius: 12px;
-      backdrop-filter: blur(10px);
-      color: #ededed;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      padding: 22px;
+      border-radius: 16px;
+      margin-top: 25px;
     }
 
-    .experience strong {
-      display: block;
-      margin-top: 12px;
-      font-size: 1.1rem;
-      color: #ffffff;
-    }
-
-    .experience ul {
-      padding-left: 18px;
-      list-style-type: disc;
-    }
-
-    /* ===================
-       CONTACT + BUTTON
-    =================== */
+    /* =========================
+       CONTACT
+    ========================= */
     .contact {
       text-align: center;
-      margin-top: 50px;
-      font-size: 1rem;
-      color: #dcdcdc;
+      margin-top: 60px;
+      opacity: 0.9;
     }
-
-    .contact a {
-      color: #4cc9f0;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
   </style>
 </head>
 
 <body>
 
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
+  <section class="hero">
+    <div class="header-box">
+      <div class="logo-area">
+        <div class="logo-box">
+          <span class="logo-text">AB</span>
+        </div>
+        <div class="name-text">Alvin Basnet</div>
+      </div>
+
+      <div class="resume-box">
+        Resume
+      </div>
+    </div>
+
+    <div class="hero-center">
+      <div class="hero-subtitle">Mechanical Engineering Portfolio</div>
+      <div class="hero-title">Alvin Basnet</div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
   <div class="container">
-    <h1>Alvin Basnet</h1>
-    <p class="subtitle">Mechanical Engineering (Mechatronics) | Design, Simulation & Systems Engineering</p>
 
-    <!-- ===== EDUCATION ===== -->
-    <h2 class="section-title">Education</h2>
-    <p><strong>BEng – Mechanical Engineering (Mechatronics)</strong><br />
-      Toronto Metropolitan University (2020–2025)</p>
-    <p>Relevant Coursework: Mechatronic System Design, Control Systems, Fluid Mechanics & Thermodynamics, Integrated Manufacturing</p>
-
-    <!-- ===== SKILLS ===== -->
-    <h2 class="section-title">Technical Skills</h2>
+    <h2>Education</h2>
     <p>
-      <strong>CAD & Design:</strong> SolidWorks, GD&T<br />
-      <strong>Simulation:</strong> COMSOL Multiphysics, MATLAB, Simulink<br />
-      <strong>Programming:</strong> Arduino (C/C++), Python<br />
+      <strong>BEng – Mechanical Engineering (Mechatronics)</strong><br>
+      Toronto Metropolitan University (2020–2025)
+    </p>
+    <p>
+      Relevant Coursework: Mechatronic System Design, Control Systems,
+      Fluid Mechanics & Thermodynamics, Integrated Manufacturing
+    </p>
+
+    <h2>Technical Skills</h2>
+    <p>
+      <strong>CAD & Design:</strong> SolidWorks, GD&T<br>
+      <strong>Simulation:</strong> COMSOL Multiphysics, MATLAB, Simulink<br>
+      <strong>Programming:</strong> Arduino (C/C++), Python<br>
       <strong>Engineering:</strong> Mechanical design, maintenance support, CFD, documentation
     </p>
 
-    <!-- ===== PROJECTS ===== -->
-    <h2 class="section-title">Featured Projects</h2>
+    <h2>Featured Projects</h2>
     <div class="projects">
 
       <div class="card">
+        <img src="images/micromixer.png" alt="Micromixer">
         <h3>Passive Microfluidic Micromixer</h3>
         <ul>
-          <li>Designed & simulated microfluidic channels in COMSOL</li>
+          <li>Designed & simulated channels in COMSOL</li>
           <li>Improved mixing efficiency by ~35%</li>
         </ul>
-        <a href="https://github.com/alvinbasnet/passive-micromixer-comsol" target="_blank">View Project →</a>
+        <a href="https://github.com/alvinbasnet/passive-micromixer-comsol">View Project →</a>
       </div>
 
       <div class="card">
+        <img src="images/pendulum.png" alt="Inverted Pendulum">
         <h3>Self-Balancing Inverted Pendulum</h3>
         <ul>
-          <li>Arduino-based inverted pendulum</li>
-          <li>PID + control implementation</li>
+          <li>Arduino-based control system</li>
+          <li>PID & pole placement</li>
         </ul>
-        <a href="https://github.com/alvinbasnet/self-balancing-inverted-pendulum-robot" target="_blank">View Project →</a>
+        <a href="https://github.com/alvinbasnet/self-balancing-inverted-pendulum-robot">View Project →</a>
       </div>
 
       <div class="card">
+        <img src="images/gauges.png" alt="Gauges">
         <h3>Gauges, Jigs & Fixtures</h3>
         <ul>
-          <li>Inspection gauges & manufacturing fixtures</li>
+          <li>Inspection gauges</li>
           <li>GD&T (MMC, LMC)</li>
         </ul>
-        <a href="https://github.com/alvinbasnet/gauges-jigs-fixtures-design" target="_blank">View Project →</a>
+        <a href="https://github.com/alvinbasnet/gauges-jigs-fixtures-design">View Project →</a>
       </div>
 
       <div class="card">
+        <img src="images/maintenance.png" alt="Maintenance">
         <h3>Engineering Maintenance (407 ETR)</h3>
         <ul>
-          <li>Inspections & preventive maintenance</li>
+          <li>Preventive maintenance</li>
           <li>Reliability-focused engineering</li>
         </ul>
-        <a href="https://github.com/alvinbasnet/maintenance-reliability-engineering" target="_blank">View Project →</a>
+        <a href="https://github.com/alvinbasnet/maintenance-reliability-engineering">View Project →</a>
       </div>
 
     </div>
 
-    <!-- ===== EXPERIENCE ===== -->
-    <h2 class="section-title">Experience Highlights</h2>
+    <h2>Experience Highlights</h2>
     <div class="experience">
       <strong>Highway Operations Intern – 407 ETR</strong>
       <ul>
-        <li>Maintenance & reliability of electromechanical systems</li>
-        <li>Inspections & technical data analysis</li>
+        <li>Electromechanical maintenance & inspections</li>
+        <li>Technical data analysis</li>
       </ul>
 
       <strong>Part-Time Manager – Marigold Indian Bistro</strong>
       <ul>
-        <li>Operations & maintenance problem solving</li>
+        <li>Operational problem solving</li>
         <li>Improved efficiency by 30%</li>
       </ul>
     </div>
 
-    <!-- ===== CONTACT ===== -->
     <div class="contact">
-      📧 alvinbasnet21@gmail.com<br />
-      🔗 <a href="#">LinkedIn (add link)</a>
+      📧 alvinbasnet21@gmail.com <br>
+      🔗 LinkedIn (add link)
     </div>
+
   </div>
 
 </body>
