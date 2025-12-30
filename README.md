@@ -10,17 +10,17 @@
 
   <style>
     /* =========================
-       GLOBAL RESET
+       GLOBAL STYLES
     ========================= */
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #0a2a66, #0f4c81);
+      background: #0b0b0b;
       color: white;
       line-height: 1.6;
     }
@@ -37,30 +37,30 @@
       position: relative;
       min-height: 100vh;
       background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("images/background.jpg"); /* optional image */
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("images/background.jpg"); /* ADD YOUR IMAGE HERE */
       background-size: cover;
       background-position: center;
     }
 
     /* =========================
-       HEADER BOX (TOP)
+       HEADER BOX
     ========================= */
     .header-box {
       position: absolute;
-      top: 20px;
-      left: 20px;
-      right: 20px;
+      top: 30px;
+      left: 30px;
+      right: 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 18px 26px;
-      border: 1.5px solid rgba(255,255,255,0.6);
+      border: 1.5px solid rgba(255,255,255,0.4);
       border-radius: 18px;
-      backdrop-filter: blur(8px);
-      background: rgba(255,255,255,0.03);
+      backdrop-filter: blur(6px);
     }
 
+    /* LOGO + NAME */
     .logo-area {
       display: flex;
       align-items: center;
@@ -78,7 +78,7 @@
     }
 
     .logo-text {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 700;
       letter-spacing: 2px;
     }
@@ -89,10 +89,10 @@
       white-space: nowrap;
     }
 
-    /* Resume Button */
+    /* RESUME BUTTON */
     .resume-box {
       border: 1.5px solid white;
-      padding: 10px 26px;
+      padding: 10px 24px;
       border-radius: 999px;
       font-weight: 600;
       cursor: pointer;
@@ -101,7 +101,7 @@
 
     .resume-box:hover {
       background: white;
-      color: #0a2a66;
+      color: black;
       transform: translateY(-2px);
     }
 
@@ -114,8 +114,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
-      width: 100%;
-      padding: 0 20px;
     }
 
     .hero-subtitle {
@@ -123,12 +121,12 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       margin-bottom: 12px;
-      opacity: 0.95;
+      opacity: 0.9;
     }
 
     .hero-title {
       font-family: 'Great Vibes', cursive;
-      font-size: 5.5rem;
+      font-size: 5.2rem;
       line-height: 1;
     }
 
@@ -138,7 +136,7 @@
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 90px 20px;
+      padding: 80px 20px;
     }
 
     h2 {
@@ -149,8 +147,8 @@
     }
 
     p {
+      opacity: 0.9;
       margin-bottom: 16px;
-      opacity: 0.95;
     }
 
     /* =========================
@@ -164,11 +162,11 @@
     }
 
     .card {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.07);
       backdrop-filter: blur(12px);
-      border-radius: 18px;
+      border-radius: 16px;
       padding: 22px;
-      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
       transition: transform 0.3s ease;
     }
 
@@ -190,16 +188,22 @@
 
     .card ul {
       padding-left: 18px;
-      opacity: 0.95;
+      opacity: 0.9;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      font-weight: 600;
     }
 
     /* =========================
        EXPERIENCE
     ========================= */
     .experience {
-      background: rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.07);
       padding: 22px;
-      border-radius: 18px;
+      border-radius: 16px;
       margin-top: 25px;
     }
 
@@ -209,7 +213,7 @@
     .contact {
       text-align: center;
       margin-top: 60px;
-      opacity: 0.95;
+      opacity: 0.9;
     }
   </style>
 </head>
@@ -218,8 +222,6 @@
 
   <!-- HERO -->
   <section class="hero">
-
-    <!-- TOP HEADER BOX -->
     <div class="header-box">
       <div class="logo-area">
         <div class="logo-box">
@@ -233,12 +235,10 @@
       </div>
     </div>
 
-    <!-- CENTER TEXT -->
     <div class="hero-center">
       <div class="hero-subtitle">Mechanical Engineering Portfolio</div>
       <div class="hero-title">Alvin Basnet</div>
     </div>
-
   </section>
 
   <!-- MAIN CONTENT -->
@@ -248,6 +248,10 @@
     <p>
       <strong>BEng – Mechanical Engineering (Mechatronics)</strong><br>
       Toronto Metropolitan University (2020–2025)
+    </p>
+    <p>
+      Relevant Coursework: Mechatronic System Design, Control Systems,
+      Fluid Mechanics & Thermodynamics, Integrated Manufacturing
     </p>
 
     <h2>Technical Skills</h2>
@@ -262,27 +266,65 @@
     <div class="projects">
 
       <div class="card">
-        <img src="images/micromixer.png">
+        <img src="images/micromixer.png" alt="Micromixer">
         <h3>Passive Microfluidic Micromixer</h3>
         <ul>
           <li>Designed & simulated channels in COMSOL</li>
           <li>Improved mixing efficiency by ~35%</li>
         </ul>
+        <a href="https://github.com/alvinbasnet/passive-micromixer-comsol">View Project →</a>
       </div>
 
       <div class="card">
-        <img src="images/pendulum.png">
+        <img src="images/pendulum.png" alt="Inverted Pendulum">
         <h3>Self-Balancing Inverted Pendulum</h3>
         <ul>
           <li>Arduino-based control system</li>
           <li>PID & pole placement</li>
         </ul>
+        <a href="https://github.com/alvinbasnet/self-balancing-inverted-pendulum-robot">View Project →</a>
+      </div>
+
+      <div class="card">
+        <img src="images/gauges.png" alt="Gauges">
+        <h3>Gauges, Jigs & Fixtures</h3>
+        <ul>
+          <li>Inspection gauges</li>
+          <li>GD&T (MMC, LMC)</li>
+        </ul>
+        <a href="https://github.com/alvinbasnet/gauges-jigs-fixtures-design">View Project →</a>
+      </div>
+
+      <div class="card">
+        <img src="images/maintenance.png" alt="Maintenance">
+        <h3>Engineering Maintenance (407 ETR)</h3>
+        <ul>
+          <li>Preventive maintenance</li>
+          <li>Reliability-focused engineering</li>
+        </ul>
+        <a href="https://github.com/alvinbasnet/maintenance-reliability-engineering">View Project →</a>
       </div>
 
     </div>
 
+    <h2>Experience Highlights</h2>
+    <div class="experience">
+      <strong>Highway Operations Intern – 407 ETR</strong>
+      <ul>
+        <li>Electromechanical maintenance & inspections</li>
+        <li>Technical data analysis</li>
+      </ul>
+
+      <strong>Part-Time Manager – Marigold Indian Bistro</strong>
+      <ul>
+        <li>Operational problem solving</li>
+        <li>Improved efficiency by 30%</li>
+      </ul>
+    </div>
+
     <div class="contact">
-      📧 alvinbasnet21@gmail.com
+      📧 alvinbasnet21@gmail.com <br>
+      🔗 LinkedIn (add link)
     </div>
 
   </div>
