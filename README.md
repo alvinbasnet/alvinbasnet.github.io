@@ -37,8 +37,7 @@
       min-height: 100vh;
       background:
         linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-        url("images/background.jpg"); /* <img width="1632" height="2912" alt="image" src="https://github.com/user-attachments/assets/6f3813ff-1952-4db3-8bda-0e3df54441ed" />
- */
+        url("images/background.jpg"); /*  */
       background-size: cover;
       background-position: center;
     }
